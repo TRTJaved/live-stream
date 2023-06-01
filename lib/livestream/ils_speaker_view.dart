@@ -25,11 +25,11 @@ class _ILSSpeakerViewState extends State<ILSSpeakerView> {
     setMeetingEventListener();
     participants.putIfAbsent(
         widget.room.localParticipant.id, () => widget.room.localParticipant);
-    widget.room.participants.values.forEach((participant) {
+    for (var participant in widget.room.participants.values) {
       if (participant.mode == Mode.CONFERENCE) {
         participants.putIfAbsent(participant.id, () => participant);
       }
-    });
+    }
     hlsState = widget.room.hlsState;
   }
 

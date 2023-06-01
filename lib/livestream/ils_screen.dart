@@ -32,7 +32,7 @@ class _ILSScreenState extends State<ILSScreen> {
       micEnabled: true,
       camEnabled: true,
       defaultCameraIndex:
-          1, // Index of MediaDevices will be used to set default camera
+          0, // Index of MediaDevices will be used to set default camera
       mode: widget.mode,
     );
 
@@ -81,7 +81,7 @@ class _ILSScreenState extends State<ILSScreen> {
                       : null
               : const Center(
                   child: Text(
-                    "Joining...",
+                    "Connecting...",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),

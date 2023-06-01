@@ -51,6 +51,7 @@ class _ParticipantTileState extends State<ParticipantTile> {
           ? RTCVideoView(
               videoStream?.renderer as RTCVideoRenderer,
               objectFit: RTCVideoViewObjectFit.RTCVideoViewObjectFitCover,
+              filterQuality: FilterQuality.high,
             )
           : Container(
               color: Colors.grey.shade800,
