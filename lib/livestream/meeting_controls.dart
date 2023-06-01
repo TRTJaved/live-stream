@@ -18,24 +18,27 @@ class MeetingControls extends StatelessWidget {
     return Wrap(
       children: [
         ElevatedButton(
-            onPressed: onToggleMicButtonPressed,
-            child: const Text('Toggle Mic')),
+          onPressed: onToggleMicButtonPressed,
+          child: const Text(
+            'Mic',
+          ),
+        ),
         const SizedBox(width: 10),
         ElevatedButton(
-            onPressed: onToggleCameraButtonPressed,
-            child: const Text('Toggle Cam')),
+            onPressed: onToggleCameraButtonPressed, child: const Text('Cam')),
         const SizedBox(width: 10),
         ElevatedButton(
-            onPressed: onHLSButtonPressed,
-            child: Text(hlsState == "HLS_STOPPED"
-                ? 'Start HLS'
-                : hlsState == "HLS_STARTING"
-                    ? "Starting HLS"
-                    : hlsState == "HLS_STARTED" || hlsState == "HLS_PLAYABLE"
-                        ? "Stop HLS"
-                        : hlsState == "HLS_STOPPING"
-                            ? "Stopping HLS"
-                            : "Start HLS")),
+          onPressed: onHLSButtonPressed,
+          child: Text(hlsState == "HLS_STOPPED"
+              ? 'Go Live'
+              : hlsState == "HLS_STARTING"
+                  ? "Starting Live"
+                  : hlsState == "HLS_STARTED" || hlsState == "HLS_PLAYABLE"
+                      ? "Stop Live"
+                      : hlsState == "HLS_STOPPING"
+                          ? "Stopping Live"
+                          : "Start Live"),
+        ),
       ],
     );
   }

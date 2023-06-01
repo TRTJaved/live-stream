@@ -48,39 +48,48 @@ class _ILSSpeakerViewState extends State<ILSSpeakerView> {
         children: [
           Row(
             children: [
-              Expanded(
-                  child: Text(
-                widget.room.id,
-                style: const TextStyle(color: Colors.white),
-              )),
-              ElevatedButton(
-                onPressed: () => {
-                  Clipboard.setData(ClipboardData(text: widget.room.id)),
-                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                    content: Text("Meeting Id Coppied"),
-                  ))
-                },
-                child: const Text("Copy Meeting Id"),
+              // Expanded(
+              //   child: Text(
+              //     widget.room.id,
+              //     style: const TextStyle(color: Colors.white),
+              //   ),
+              // ),
+              // ElevatedButton(
+              //   onPressed: () => {
+              //     Clipboard.setData(ClipboardData(text: widget.room.id)),
+              //     ScaffoldMessenger.of(context).showSnackBar(
+              //       const SnackBar(
+              //         content: Text("Meeting Id Coppied"),
+              //       ),
+              //     )
+              //   },
+              //   child: const Text("Copy Meeting Id"),
+              // ),
+              const Spacer(
+                flex: 4,
               ),
-              const SizedBox(width: 10),
-              ElevatedButton(
-                onPressed: () => {widget.room.leave()},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.red,
+              Expanded(
+                child: ElevatedButton(
+                  onPressed: () => {
+                    widget.room.leave(),
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red,
+                  ),
+                  child: const Text("Leave"),
                 ),
-                child: const Text("Leave"),
               )
             ],
           ),
           const SizedBox(
             height: 20,
           ),
+          // Text(
+          //   "Stater: $hlsState",
+          //   style: const TextStyle(color: Colors.white),
+          // ),
           Text(
-            "Stater: $hlsState",
-            style: const TextStyle(color: Colors.white),
-          ),
-          Text(
-            "Current HLS State: ${hlsState == "HLS_STARTED" || hlsState == "HLS_PLAYABLE" ? "Livestream is Started" : hlsState == "HLS_STARTING" ? "Livestream is starting" : hlsState == "HLS_STOPPING" ? "Livestream is stopping" : "Livestream is stopped"}",
+            "Current Streaming Status: ${hlsState == "HLS_STARTED" || hlsState == "HLS_PLAYABLE" ? "Livestream is Started" : hlsState == "HLS_STARTING" ? "Livestream is starting" : hlsState == "HLS_STOPPING" ? "Livestream is stopping" : "Livestream is stopped"}",
             style: const TextStyle(color: Colors.white),
           ),
           //render all participant
