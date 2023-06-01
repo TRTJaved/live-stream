@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:live_streaming/livestream/join_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,12 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'VideoSDK ILS QuickStart',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        primarySwatch: Colors.blue,
       ),
-      home: Container(),
+      home: JoinScreen(),
     );
   }
 }

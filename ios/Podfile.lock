@@ -2,9 +2,13 @@ PODS:
   - Flutter (1.0.0)
   - flutter_foreground_task (0.0.1):
     - Flutter
+  - flutter_vlc_player (3.0.3):
+    - Flutter
+    - MobileVLCKit (~> 3.5.1)
   - flutter_webrtc (0.9.31):
     - Flutter
     - WebRTC-SDK (= 104.5112.17)
+  - MobileVLCKit (3.5.1)
   - path_provider_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
@@ -18,6 +22,7 @@ PODS:
 DEPENDENCIES:
   - Flutter (from `Flutter`)
   - flutter_foreground_task (from `.symlinks/plugins/flutter_foreground_task/ios`)
+  - flutter_vlc_player (from `.symlinks/plugins/flutter_vlc_player/ios`)
   - flutter_webrtc (from `.symlinks/plugins/flutter_webrtc/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
   - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
@@ -25,6 +30,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - MobileVLCKit
     - WebRTC-SDK
 
 EXTERNAL SOURCES:
@@ -32,6 +38,8 @@ EXTERNAL SOURCES:
     :path: Flutter
   flutter_foreground_task:
     :path: ".symlinks/plugins/flutter_foreground_task/ios"
+  flutter_vlc_player:
+    :path: ".symlinks/plugins/flutter_vlc_player/ios"
   flutter_webrtc:
     :path: ".symlinks/plugins/flutter_webrtc/ios"
   path_provider_foundation:
@@ -44,12 +52,14 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
   flutter_foreground_task: 21ef182ab0a29a3005cc72cd70e5f45cb7f7f817
+  flutter_vlc_player: e321a4dcfaa0b9018a644791231e3e24e73d2fc7
   flutter_webrtc: 02c023207f972145a3bc8c7aada86754f264d563
+  MobileVLCKit: 144d5f565512d1147d63b0fa1379231b3fd66535
   path_provider_foundation: eaf5b3e458fc0e5fbb9940fb09980e853fe058b8
   shared_preferences_foundation: e2dae3258e06f44cc55f49d42024fd8dd03c590c
   videosdk: a23c2981afcefd8ac781c7778d39669282441093
   WebRTC-SDK: 082ae4893212534a779ca233f19a9df8efd5f3bd
 
-PODFILE CHECKSUM: 70d9d25280d0dd177a5f637cdb0f0b0b12c6a189
+PODFILE CHECKSUM: 7be2f5f74864d463a8ad433546ed1de7e0f29aef
 
 COCOAPODS: 1.12.0
